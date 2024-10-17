@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-background-video">
+        <video id="background-video" autoplay muted loop class="background-video" src="5977025-uhd_2160_3840_25fps.mp4"></video>
+    </div>
+    <header class="flex space-between">
+        <div class="flex column gap-16">
+            <h1 id="title" class="color-white">DESERT OSASIS CAMPSITE</h1>
+            <h3 id="location" class="color-white">Sahara, Morocco</h3>
+            <p id="description-small" class="color-white">Feel the speed and adrenaline on our extreme desert safari</p>
+        </div>
+        <a href="home.html"><span class="material-symbols-outlined color-white">arrow_back</span></a>
+    </header>
+
+    <main class="flex column space-between">
+        <table>
+            <tr>
+                <th><p id="custom-label-1" class="color-white">START</p></th>
+                <th><p id="custom-label-2" class="color-white">DURATION</p></th>
+                <th><p id="custom-label-3" class="color-white">FRIENDS</p></th>
+            </tr>
+            <tr>
+                <td><p id="custom-value-1" class="color-white">CH</p></td>
+                <td><p id="custom-value-2" class="color-white">8 DAYS</p></td>
+                <td><p id="custom-value-3" class="color-white">2/6</p></td>
+            </tr>
+        </table>
+        <div id="video-container" class="flex-1"></div>
+        <div class="flex column gap-16">
+            <div class="vertical-scroll">
+                <p id="description-large" class="color-white">Race across endless sand dunes and experience the thrill of speed in the heart of the desert. It’s an adventure you’ll remember for a lifetime!</p>
+            </div>
+            <div class="flex">
+                <button class="width-100 btn-big">DISCOVER</button>
+                <button class="box btn-big"><span class="material-symbols-outlined">arrow_outward</span></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="events.js"></script>
+</body>
+</html>

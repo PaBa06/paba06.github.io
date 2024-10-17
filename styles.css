@@ -1,0 +1,396 @@
+/*Block z.B. header, container, menu, checkbox oder input*/
+/*Element z.B. menu item, list item, checkbox caption, header title*/
+/*Modifier z.B. disabled, highlighted, checked, fixed, size big, color yellow*/
+/*https://getbem.com/introduction/*/
+
+/*=====Root=====*/
+:root {
+    --accent-color: #D9D9D9;
+
+    --font-color: #8E8E8E;
+}
+
+/*=====Layout=====*/
+/*Dieser Abschnitt enthält Styles, die das grundlegende Layout der Seite bestimmen, wie die Schriftarten, Margen und spezifische Container wie Header und Footer.*/
+
+/*=====COMPONENTS=====*/
+/*Hier werden wiederverwendbare Komponenten definiert, wie Buttons und Karten. Diese Styles sind spezifisch für die Elemente, die auf der Seite verwendet werden.*/
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px !important;
+    box-sizing: border-box;
+    gap: 16px;
+    color: var(--font-color);
+}
+
+header {
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+nav{
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: black !important;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: black !important;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+input[type="text"]{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    min-height: 32px;
+    background-color: var(--accent-color);
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+textarea{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+label {
+    text-align: center;
+}
+
+details {
+    height: 32px;
+    min-width: 112px;
+    background-color: #FFCF4D;
+    border-radius: 16px;
+    position: relative;
+    display: inline-block;
+}
+
+details ul {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 16px;
+    text-align: left;
+}
+
+details ul li {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding-left: 16px;
+    cursor: pointer;
+}
+
+details ul li:hover {
+    background-color: #FFCF4D;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 16px;
+    color: black;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 16px;
+}
+
+th {
+    font-weight: normal;
+}
+
+td {
+    text-align: center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*=====UTILITIES=====*/
+/*Utility-Klassen sind einfache, wiederverwendbare Klassen, die für spezielle Stile verwendet werden können. Sie haben in der Regel nur eine oder zwei CSS-Eigenschaften, z. B. .hidden, um Elemente auszublenden, oder .text-center, um den Text zu zentrieren.*/
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+.grid-colums-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-colums-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-element-wide {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.align-flex-end {
+    align-items: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.horizontal-scroll {
+    overflow-y: auto;
+    min-height: 64px;
+}
+
+.vertical-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-x: auto;
+    aspect-ratio: 3/1;
+}
+
+.gap-16{
+    gap: 16px;
+}
+
+.padding-8 {
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.padding-16 {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.radius-16 {
+    border-radius: 16px;
+}
+
+.box {
+    aspect-ratio: 1/1;
+}
+
+.box-64{
+    width: 64px;
+    height: 64px;
+}
+
+.box-160{
+    width: 160px;
+    height: 160px;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.height-160{
+    height: 160px;
+}
+
+.bg-img {
+    background-image: url("https://images.pexels.com/photos/1731660/pexels-photo-1731660.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-color-accent {
+    background-color: var(--accent-color);
+}
+
+.bg-color-white {
+    background-color: white !important;
+}
+
+.color-black {
+    color: black !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.color-font {
+    color: var(--font-color) !important;
+}
+
+.btn-big {
+    background-color: #FFCF4D;
+    border-radius: 16px;
+    min-height: 48px;
+    font-size: 24px;
+}
+
+.btn-little {
+    background-color: #FFCF4D;
+    border-radius: 16px;
+    height: 32px;
+    min-width: 80px;
+}
+
+.btn-hashtag {
+    background-color: var(--accent-color);
+    height: 32px;
+    padding: 0 16px;
+    border-radius: 16px;
+}
+
+.icon-big {
+    font-size: 128px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.material-symbols-outlined {
+    color: black;
+}
+
+.container-background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Video hinter den Inhalt legen */
+}
+
+/*=====CSS RESET=====*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-color);
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+hr {
+    margin: 0;
+    padding: 0;
+}
